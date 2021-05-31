@@ -1,0 +1,89 @@
+<!-- Button trigger modal -->
+<button type="button" id="file-preview-modal-btn" class="btn btn-primary"  
+    onclick="show_file_preview_modal(this)">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+
+  <div id="myModal" class="myModal" >
+
+    <!-- Modal content -->
+    <span class="close movable-content">&times;</span>
+    <div class="modal-innercontent movable-content">    
+      
+      <div class="table-outer-wrap">
+        <div class='table-container'>
+
+          <div id="mover" class='movable'>
+            
+            <div style="margin-top: 1%;">Uploaded Data Preview</div>
+            <p>Sowing only the first 100 rows</p>
+          </div>
+
+          <div class="container_col">
+            <div class='file-preview-modal-content'>
+
+
+              {% if rows %}
+              <form id="data-preview-table" class="">
+                <div class="divTable">
+                  {% if headers %}
+                  <div class="headRow">
+                    {% for header in headers %}
+                     <div id="resizeable-table-{{forloop.counter0}}" 
+                          class="divCell resizable-table stylized-table-cell">
+                          <p>{{header}}</p>
+                          
+                      </div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                
+                
+                {% for row in str_rows %}
+                  {% if forloop.counter0 < 100 %} 
+                  <div class="divRow">
+                        {% for field, val in row.items %}
+                          <div 
+                          class="divCell resizable-table-vals-{{forloop.counter0}} stylized-table-cell">
+                          <p>{{ val }}</p>
+                          </div>
+                        {% endfor %}
+                  </div>
+                  {% endif %}
+                {% endfor %}
+                 
+                 
+     
+                </div>
+
+            </form>
+          {% endif %}
+                
+
+                
+            </div>
+
+            <div class='rightside-modal-space movable'>
+            </div>
+
+          </div>
+
+          
+          <div class='movable'>
+            <button type="button" class="btn btn-secondary modal-button"
+                onclick="file_preview_close(this)">Close</button>
+    
+            <button type="button" class="btn btn-primary modal-button">Save changes</button>
+          </div>
+      </div>
+
+      
+
+
+      </div>
+    </div>
+    
+  
+  </div>
