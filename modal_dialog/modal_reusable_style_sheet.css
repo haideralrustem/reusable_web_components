@@ -1,158 +1,158 @@
 #myModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    
-  }
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   
-  .modal-innercontent {
-    position: fixed;
-    padding-left: 2%;  
-    padding-right: 2%;
-    width: 58vw;
-    border: 1px solid #888;
-    background-color: white;
-    overflow: auto;
-    
-    box-sizing: content-box;
-    border-radius: 10px;
-    left: 16.5%;
-    height: 43vw;
-  }
+}
+
+.modal-innercontent {
+  position: fixed;
+  padding-left: 2%;  
+  padding-right: 2%;
+  width: 80vw;
+  height: 43vw;
+  border: 1px solid #888;
+  background-color: white;
+  overflow: auto;
   
-  .table-outer-wrap {
-    display: inline-flex;
-    width: 100%;
-  }
-  .table-container {
-    display: block;
-    /* box-sizing: content-box; */
-    width: 100%;
-  }
+  box-sizing: content-box;
+  border-radius: 10px;
+  left: 7.5%;
   
+}
+
+.table-outer-wrap {
+  display: inline-flex;
+  width: 100%;
+}
+.table-container {
+  display: block;
+  /* box-sizing: content-box; */
+  width: 100%;
+}
+
+
+
+
+.movable {
+  cursor: move;
+  position: relative;
   
-  
-  
-  .movable {
-    cursor: move;
-    position: relative;
-    
-  }
-  
-  #mover {
-    height: 3vw;
-    margin-bottom: 2%;
-  }
-  .close {
-    cursor: pointer;
-  }
-  span.close {
-  
-    position: absolute;
-    opacity: 1;
-    color: rgb(185, 21, 21);
-    font-size: 3.5rem;
-    opacity: 0.8;
-    transition: 0.2s color ease-in-out, 0.2s font-size ease-in-out;
-  }
-  span.close:hover {
-    color: rgb(255, 0, 0);
-    opacity: 1;
-    font-size: 3.8rem;
-  
-  }
-  
-  .file-preview-modal-content {
-    width: 100%;
-    height: fit-content;
-    box-sizing: content-box;
-    overflow: auto;
-  }
-  
-  .container_col {
-    display: inline-flex;
-    width: 100%;
-  
-  }
-  .rightside-modal-space {
-    width: 5vw;
-  }
-  
-  .divTable
-      {
-          display:  block;
-          border-radius: 2px;
-          overflow: auto;
-          height: 31vw;
-          background-color:white;
-          border:1px solid  #6666663b;
-          border-spacing:5px;/*cellspacing:poor IE support for  this*/
-         /* border-collapse:separate;*/
-  
-         padding: 1% 5% 1% 0%;
-      }
-  
-  .headRow {
-    display: inline-flex;
-    
-  }
-  .divRow {
-      display: inline-flex;
-      overflow: auto;
+}
+
+#mover {
+  height: 3vw;
+  margin-bottom: 2%;
+}
+.close {
+  cursor: pointer;
+}
+span.close {
+
+  position: absolute;
+  opacity: 1;
+  color: rgb(185, 21, 21);
+  font-size: 3.5rem;
+  opacity: 0.8;
+  transition: 0.2s color ease-in-out, 0.2s font-size ease-in-out;
+}
+span.close:hover {
+  color: rgb(255, 0, 0);
+  opacity: 1;
+  font-size: 3.8rem;
+
+}
+
+.file-preview-modal-content {
+  width: 100%;
+  height: fit-content;
+  box-sizing: content-box;
+  overflow: auto;
+}
+
+.container_col {
+  display: inline-flex;
+  width: 100%;
+
+}
+.rightside-modal-space {
+  width: 5vw;
+}
+
+.divTable
+    {
+        display:  block;
+        border-radius: 2px;
+        overflow: auto;
+        height: 20vw;
+        background-color:white;
+        border:1px solid  #6666663b;
+        border-spacing:5px;/*cellspacing:poor IE support for  this*/
+       /* border-collapse:separate;*/
+
+       padding: 1% 5% 1% 0%;
     }
+
+.headRow {
+  display: inline-flex;
   
-  .divCell {
-       
-        /* display:table-cell; */
-        width:12vw;
-        /* min-width: 7vw; */
-        background-color:rgb(255, 254, 254);
-        margin-left: 5px;
-        margin-right: 1px;
-    }
-  .divCell p {
-    margin-left: 5px;
-  }
-  
-  
-  /* table {
-    width: 100%;
-    
-     border-right: 10px solid white; 
-    border-collapse: collapse;
-    box-sizing: content-box;
-    overflow-y: auto;
-  } */
-  
-  
-  .stylized-table-cell {
-    
-    border-bottom:1px ridge rgb(153, 203, 250);
-    border-left: 0.5px ridge rgb(153, 203, 250);
-    height: auto;
-    
-  }
-  
-  
-  .resizable-table {
-    resize: horizontal;
+}
+.divRow {
+    display: inline-flex;
     overflow: auto;
-    border: 0;
-    /* min-width: fit-content; */
-    background-color: rgb(199, 223, 245);
-    box-sizing: border-box;
-    /* margin-right: 5px; */
   }
-  
-  
-  .modal-button {
-    margin-top: 3%;
-    margin-bottom: 3%;
+
+.divCell {
+     
+      /* display:table-cell; */
+      width:12vw;
+      /* min-width: 7vw; */
+      background-color:rgb(255, 254, 254);
+      margin-left: 5px;
+      margin-right: 1px;
   }
+.divCell p {
+  margin-left: 5px;
+}
+
+
+/* table {
+  width: 100%;
+  
+   border-right: 10px solid white; 
+  border-collapse: collapse;
+  box-sizing: content-box;
+  overflow-y: auto;
+} */
+
+
+.stylized-table-cell {
+  
+  border-bottom:1px ridge rgb(153, 203, 250);
+  border-left: 0.5px ridge rgb(153, 203, 250);
+  height: auto;
+  
+}
+
+
+.resizable-table {
+  resize: horizontal;
+  overflow: auto;
+  border: 0;
+  /* min-width: fit-content; */
+  background-color: rgb(199, 223, 245);
+  box-sizing: border-box;
+  /* margin-right: 5px; */
+}
+
+
+.modal-button {
+  margin-top: 3%;
+  margin-bottom: 3%;
